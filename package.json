@@ -1,0 +1,16 @@
+{
+  "name": "express1",
+  "version": "1.0.0",
+  "description": "a simple api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express"
+  ],
+  "author": "Hal Forrest",
+  "license": "ISC"
+}
