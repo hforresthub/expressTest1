@@ -3,7 +3,13 @@ const setEditModal = (isbn) => {
 }
 
 const deleteBook = (isbn) => {
-	// We will implement this later
+	const xhttp = new XMLHttpRequest()
+
+	xhttp.open("DELETE", `http://localhost:3000/book/${isbn}`, false)
+	xhttp.send();
+
+	// Reloading the page
+	location.reload()
 }
 
 const loadBooks = () => {
@@ -28,7 +34,7 @@ const loadBooks = () => {
 
 						<hr>
 
-						<button type="button" class="btn btn-danger">Delete</button>
+						<button type="button" class="btn btn-danger" onClick="deleteBook(${book.isbn})">Delete</button>
 						<button types="button" class="btn btn-primary" data-toggle="modal"
 							data-target="#editBookModal" onClick="setEditModal(${book.isbn})">
 							Edit
